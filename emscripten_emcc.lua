@@ -29,6 +29,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getcppflags(cfg)
+		print("emcc.getcppflags")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -49,6 +51,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getcflags(cfg)
+		print("emcc.getcflags")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -69,6 +73,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getcxxflags(cfg)
+		print("emcc.getcxxflags")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -89,6 +95,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getdefines(defines)
+		print("emcc.getdefines")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -97,6 +105,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getundefines(undefines)
+		print("emcc.getundefines")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -116,6 +126,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getforceincludes(cfg)
+		print("emcc.getforceincludes")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -138,6 +150,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getincludedirs(cfg, dirs)
+		print("emcc.getincludedirs")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -190,6 +204,8 @@
 
 	function emcc.getldflags(cfg)
 		local flags = config.mapFlags(cfg, emcc.ldflags)
+		print("emcc.getldflags")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 	end
 
@@ -209,6 +225,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getLibraryDirectories(cfg)
+		print("emcc.getLibraryDirectories")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -231,6 +249,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getlinks(cfg, systemOnly)
+		print("emcc.getlinks")
+		for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
@@ -250,6 +270,8 @@
 
 		-- Just pass through to Clang for now
 		local flags = clang.getmakesettings(cfg)
+		print("emcc.getmakesettings")
+		-- for k,v in pairs(flags) do print(k,v) end
 		return flags
 
 	end
