@@ -27,6 +27,8 @@
 		"IgnoreDynamicLinking",
 	})
 
+	-- p.action.get("gmake")
+	-- premake.action._list["gmake"].valid_kinds = table.join(premake.action._list["gmake"].valid_kinds, { "HTMLPage" })
 
 --
 -- Register Emscripten properties
@@ -90,7 +92,7 @@
 
 
 
-	filter { "platforms:emscripten" }
+	filter { "platforms:Emscripten" }
 		system "emscripten"
 		toolset "emcc"
 
